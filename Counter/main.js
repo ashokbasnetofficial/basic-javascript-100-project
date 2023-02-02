@@ -18,6 +18,7 @@ function Decrement(){
  }
  
 }
+// function for increment
 function Increment(){
   count++;
 counter.innerHTML=count;
