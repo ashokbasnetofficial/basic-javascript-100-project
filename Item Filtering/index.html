@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" />
+    <title>Item Filtering</title>
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- container  -->
+  <div class="header">
+    <h3 class="text-center my-5" style="color: rgb(4, 48, 144);">Item Filtering</h3>
+  </div>
+ <div class="container">
+  <!-- searching button  -->
+  
+  <div class="row height d-flex justify-content-center align-items-center">
+
+    <div class="col-md-6">
+
+      <div class="form">
+        <i class="bi bi-search"></i>
+        <input type="text" class="form-control form-input" placeholder="Search anything...">
+        <span class="left-pan"><i class="bi bi-mic"></i></span>
+      </div>
+      
+    </div>
+    
+  </div>
+    <!-- filtering button  -->
+    
+    <div class="row">
+      <div class="col-lg-8 mx-auto d-flex  justify-content-around my-0 filteritem flex-wrap">
+        <a href="" class="btn btn-outline-secondary text-uppercase m-1 filterbtn" data-filter="all">All</a>
+        <a href="" class="btn btn-outline-secondary text-uppercase m-1 filterbtn" data-filter="samsung">Samsung</a>
+        <a href="" class="btn btn-outline-secondary text-uppercase m-1 filterbtn" data-filter="iphone">Iphone</a>
+        <a href="" class="btn btn-outline-secondary text-uppercase m-1 filterbtn" data-filter="xaiomi">Xaiomi</a>
+        <a href="" class="btn btn-outline-secondary text-uppercase m-1 filterbtn"data-filter="oneplus">OnePlus</a>
+      </div>
+    </div>
+<!-- Items -->
+<div class="row" id="store-items">
+  <!-- --------4 items in list---------  -->
+  <!-- samsung phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 samsung phone-list" data-item="samsung">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/4.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Samsung</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+  </div>
+</div>
+</div>
+</div>
+
+<!-- iphone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 iphone phone-list" data-item="iphone">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/1.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Iphone 12 max pro</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+  </div>
+      </div>
+    </div>
+  </div>
+<!-- xaiomi phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 xaiomi phone-list" data-item="xaiomi">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/9.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Redmi Note 10 pro max</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+  </div>
+</div>
+</div>
+  </div>
+  <!-- oneplus phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 oneplus phone-list" data-item="oneplus">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/10.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">OnePlus</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+  </div>
+  </div>
+    </div>
+  </div>
+  <!-- ------------4 items------------------ -->
+    <!-- --------4 items in list---------  -->
+  <!-- samsung phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 phones phone-list" data-item="samsung">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/5.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Samsung</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+  </div>
+</div>
+</div>
+</div>
+
+<!-- iphone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 iphone phone-list" data-item="iphone">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/2.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Iphone 12 max pro</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+  </div>
+      </div>
+    </div>
+  </div>
+<!-- xaiomi phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 samsung phone-list" data-item="samsung">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/7.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Samsung S20 ultra</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">1900</strong></h5>
+  </div>
+</div>
+</div>
+  </div>
+  <!-- oneplus phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 oneplus phone-list" data-item="oneplus">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/11.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">OnePlus</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+  </div>
+  </div>
+    </div>
+  </div>
+  <!-- ------------4 items------------------ -->
+    <!-- --------4 items in list---------  -->
+  <!-- samsung phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 samsung phone-list" data-item="samsung">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/6.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Samsung</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+  </div>
+</div>
+</div>
+</div>
+
+<!-- iphone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 iphone phone-list" data-item="iphone">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/3.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Iphone 11</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+  </div>
+      </div>
+    </div>
+  </div>
+<!-- xaiomi phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 samsung phone-list" data-item="samsung">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/8.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">Samsung Galaxy A32</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">320</strong></h5>
+  </div>
+</div>
+</div>
+  </div>
+  <!-- oneplus phone  -->
+  <div class="col-10 col-sm-6 col-lg-4 my-3 oneplus phone-list" data-item="oneplus">
+    <div class="card ">
+      <div class="img-container">
+        <img src="img/12.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between text-capitalize">
+          <h5 id="store-item-name">OnePlus NOTE 9</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+  </div>
+  </div>
+    </div>
+  </div>
+  <!-- ------------4 items------------------ -->
+</div>
+ </div>
+<script src="./main.js"></script>
+</body>
+</html>
