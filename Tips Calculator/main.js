@@ -1,37 +1,63 @@
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-const slides = document.querySelectorAll('.img');
-let flag =0;
-slides.forEach((slide,index)=>{
-     slide.style.left=`${index*100}%`;
-     console.log(index)
-});
-function prevShow()
-{
+(function(){
+    // form set 
+    // array object for select item
+const select = [
+    {
+    value:1,
+    select_title:"Great- 20%",
+
+    },
+    {
+        value:2,
+        select_title:"Good -10%",
+        
+    },
+    {
+        value:3,
+        select_title:"Bad -5%",
+        
+    }
   
-flag=(flag-1+slides.length)%slides.length;
-console.log(flag)
-slidesShow();
+];
 
+select.forEach(select => {
+    // create option element 
+    const option = document.createElement('option');
+    // set the array object value to the option 
+    option.value=select.value;
+    option.textContent=select.select_title;
+    const selectbox = document.getElementById('selectbox');
+    selectbox.appendChild(option);
+});
 
+// ---------------form setup dyanmically --------------
+// form sumbit 
+const tip_form = document.querySelector('.tip-form');
+tip_form.addEventListener('submit',(e)=>{
+e.preventDefault();
+});
+const select_input=document.querySelectorAll('.totalbill');
+const p= document.createElement('p');
+function textContent(text){
+    p.style.color='red';
+    p.textContent=text;
+}
+textContent('hello my friend')
+function insertAfter(reference_element,new_element){
+    reference_element.parentNode.insertBefore(new_element,reference_element.nextSibling);
 
 }
-function nextShow()
-{
+insertAfter(select_input[0],p);
+
+const formValidate=(total_bill,bill_share,select_option)=>{
+  
+    let flag =false;
+ 
+    if(total_bill==''||total_bill<0){
+           
+        flag =true;
+
+    }
     
-flag=(flag+1)%slides.length;
-slidesShow();
-
 }
-function slidesShow(){
-    slides.forEach((slide)=>{
-       
-       
- slide.style.transform=`translateX(-${flag*100}%)`;
-
-
-    })
-   
-}
-prev.addEventListener('click',prevShow);
-next.addEventListener('click',nextShow);
+})();
