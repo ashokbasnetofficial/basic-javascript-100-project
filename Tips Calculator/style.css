@@ -16,7 +16,7 @@ body{
 }
 .container{
     width: 700px;
-    height: 500px;
+    height: 600px;
    border: 8px solid rgb(37, 104, 248);
     border-radius: 5px;
     display: flex;
@@ -87,3 +87,23 @@ input[type=number] {
 .input-box .submit:hover{
     background: rgb(18, 66, 169);
 }
+/* loader css */
+.result{
+    display: none;
+    }
+.loader{
+    display: none;
+}
+
+.loader img{
+object-fit:cover;
+width: 100px;
+height: 50px;
+margin-left: 20%;
+}
+
+.showloader{
+
+    display: block !important;
+}
+

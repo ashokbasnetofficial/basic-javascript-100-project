@@ -16,20 +16,30 @@
     <div class="input-box">
       <label for="totalbill" class="input-label">How Much Was Your Bill ?</label>
       <input type="number" name="totalbill" class="totalbill">
+      <span class="error_message"></span>
     </div>
     <div class="input-box">
       <label for="billshare" class="input-label">How Many People Sharing The Bill ?</label>
       <input type="number" name="totalbill" class="totalbill">
+      <span class="error_message"></span>
       </div>
       <div class="input-box">
         <select name="select" id="selectbox"  class="totalbill">
           <option value="0">Choose...</option>
         </select>
+        <span class="error_message"></span>
       </div>
         <div class="input-box">
       <input type="submit" value="Calculate"  class="submit">
         </div>
-  
+       <div class="loader">
+      <img src="img/Facebook-1s-200px.gif"/>
+      </div>
+        <div class="input-box result">
+          <span class="results"></span>
+          <span class="results"></span>
+          <span class="results"></span>
+        </div>
 
     
   </form>
