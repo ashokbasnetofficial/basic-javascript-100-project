@@ -97,26 +97,21 @@ return [tip_amount,total_amount,per_person];
 const tip_form = document.querySelector('.tip-form');
 tip_form.addEventListener('submit',(e)=>{
 e.preventDefault();
-const loader = document.querySelector('.loader');
-let result = document.querySelector('.result');
-
 let total_bill= select_input[0].value;
 let bill_share =select_input[1].value;
 let select_option=select_input[2].value;
+let result = document.querySelector('.result');
 console.log(total_bill+" "+bill_share+" "+select_option)
 const isTrue =formValidate(total_bill,bill_share,select_option)
 if(!isTrue){
     const finalResult = results(total_bill,bill_share,select_option);
-    result.classList.add('showloader');
+    const loader = document.querySelector('.loader');
        loader.classList.add('showloader');
-       const resultsshow = document.querySelectorAll('.results');  
-       resultsshow[0].textContent=``;
-       resultsshow[1].textContent=``;
-       resultsshow[2].textContent=``;
+      
   setTimeout(()=>{   
 
     loader.classList.remove('showloader');
-    
+    const resultsshow = document.querySelectorAll('.results');
     resultsshow[0].textContent=`Total Tip:रु${finalResult[0].toFixed(2)}`;
     resultsshow[1].textContent=`Total Bill Amount:रु${finalResult[1].toFixed(2)}`;
     resultsshow[2].textContent=`Per Person:रु${finalResult[2].toFixed(2)}`;
