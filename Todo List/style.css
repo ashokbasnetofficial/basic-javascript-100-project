@@ -4,38 +4,21 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none !important;
+    box-sizing: border-box;
 }
 
 body{
     height: 100vh;
     width: 100vw;
-    place-items: center;
-    display: grid;
-    overflow: hidden;
+  overflow: hidden;
     background-color: azure;
 }
-.container{
-    width: 700px;
-    height: 600px;
-   border: 8px solid rgb(37, 104, 248);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
- 
-    align-items: center;
-    border-radius: 5px;
-    position: relative;
 
-}
 .todo-box{
-    width: 100%;
+    background-color: rgb(255, 255, 255);
+    
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: .4rem;
 }
-.todo-item{
-    width: 50%;
-    display: flex;
-   
-    flex-direction: row;
-    justify-content: space-between;
-    padding: .2rem .5rem;
-    background-color: rgb(150, 3, 3);
-}
+
