@@ -2,11 +2,14 @@ const itemInput =document.querySelector('#itemInput');
 const formSubmit =document.querySelector('#itemForm')
 const clearlist = document.querySelector('#clear-list');
 const alerttext =document.querySelector('.error');
-console.log(formSubmit+" "+alerttext+itemInput)
+const clear =document.querySelector('.clear');
+const todoDiv = document.querySelector('.todo-list');
+console.log(formSubmit+" "+alerttext+" "+itemInput+" "+todoDiv)
 let todoList =[];
 
-
+//input form validation 
 const inputValidate =(input)=>{
+  // flag for validation 
     let flag=false;
       console.log(input);
       alerttext.classList.remove('alert','alert-danger')
@@ -28,7 +31,7 @@ const inputValidate =(input)=>{
 
 
 const formHandle =(value)=>{
-    const todoItems =document.querySelector('.todo-item');
+    const todoItems =todoDiv.querySelectorAll('.todo-item');
     todoItems.forEach(todoitem => {
         if(todoitem.querySelector('.todo-content').textContent==value){
             // complete 
@@ -39,6 +42,7 @@ const formHandle =(value)=>{
             //edit
           todoitem.querySelector('.edit').addEventListener('click',()=>{
             itemInput.textContent=value;
+            todoDiv.removeChild(item);
            todoList= todoList.filter((item)=>{
               return   item!=value;
             });
@@ -47,7 +51,7 @@ const formHandle =(value)=>{
         //   delete 
    
         todoitem.querySelector('.delete').addEventListener('click',()=>{
-            
+          todoDiv.removeChild(item);  
           todoList= todoList.filter((item)=>{
             return   item!=value;
           })
@@ -63,7 +67,7 @@ const removeItem=(item)=>{
 const getList =(itemList)=>{
   itemList.innerHTML='';
   itemList.forEach((item)=>{
-     item.insertAdjacentHTML('beforeend', ` <div class="todo-item d-flex justify-content-between d-none mb-3">
+     todoDiv.insertAdjacentHTML('beforeend', ` <div class="todo-item d-flex justify-content-between mb-3">
      <p class="todo-content">${item}</p>
       <div class="editor">
        <a href="#" class="complete mx-2 item-icon text-success"><i class="bi bi-check-circle"></i></a>
@@ -76,14 +80,17 @@ const getList =(itemList)=>{
   
 }
 const getLocalStore =()=>{
-  const todoStore = localStorage.getItem(todoList);
+  const todoStore = localStorage.getItem('todoList');
   if(todoStore=='undefined'||todoStore===null){
     todoList=[];
   }
   else{
     todoList=JSON.parse(todoStore);
+    console.log('get all iitem local storage:'+todoList);
+    getList(todoList);
+
   }
-  getList(todoList);
+
 }
 const postLocalStore=(todoList)=>{
 localStorage.setItem('todoList',JSON.stringify(todoList));
@@ -94,10 +101,19 @@ formSubmit.addEventListener('submit',(e)=>{
     const inputValue = itemInput.value;
     const isTrue =inputValidate(inputValue);
    if(!isTrue){
-    
-
+    todoList.push(inputValue);
+    postLocalStore(todoList);
+    getList(todoList);
+    console.log(todoList)
    }
 
+   inputValue='';
 
+});
+clear.addEventListener('click',()=>{
+  todoList =[];
+  localStorage.clear();
+  getList(todoList);
+ 
 
-})
+});
