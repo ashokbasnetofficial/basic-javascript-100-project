@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 *{
     margin : 0;
@@ -107,3 +108,114 @@ body{
     transform: rotate(360deg);
   }
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+*{
+    margin : 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: azure;
+}
+.clock-div{
+  width: 450px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/clock.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+}
+.hour{
+  position: absolute;
+  --rotate:90;
+  height: 40%;
+  width: .2rem;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  background-color: azure;
+  transform: rotate(calc(var(--rotate) *1deg));
+  bottom: 50%;
+  left: 50%;
+
+
+}
+.minute{
+  position: absolute;
+  --rotate:40;
+  height: 40%;
+  width: .2rem;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  background-color: azure;
+  transform: rotate(calc(var(--rotate) *1deg));
+  bottom: 50%;
+  left: 50%;
+
+
+}
+.second{
+  position: absolute;
+  --rotate:160;
+  height: 40%;
+  width: .2rem;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  background-color: red;
+  transform: rotate(calc(var(--rotate) *1deg));
+  bottom: 50%;
+  left: 50%;
+  /* animation: mymove linear infinite ; */
+  animation-name: mymove;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  animation-duration: 60s;
+
+}
+.clock-div::after{
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: red;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ 
+}
+.clock-div::before{
+  content: '';
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+ 
+}
+
+@keyframes mymove {
+   0%{
+    transform: rotate(0deg);
+   }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+>>>>>>> 8f8693f55f56302fa69265b972888d2ee3bf5b46
